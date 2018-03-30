@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.6
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MachineMentorApi", "MachineMentorApi\MachineMentorApi.csproj", "{A2924DA6-8FDD-49D9-9587-ED07F5982C37}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MachineMentorApi.Tests", "MachineMentorApi.Tests\MachineMentorApi.Tests.csproj", "{7095D2E1-191E-4692-ACF2-41774CB88255}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A2924DA6-8FDD-49D9-9587-ED07F5982C37}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2924DA6-8FDD-49D9-9587-ED07F5982C37}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2924DA6-8FDD-49D9-9587-ED07F5982C37}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2924DA6-8FDD-49D9-9587-ED07F5982C37}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7095D2E1-191E-4692-ACF2-41774CB88255}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7095D2E1-191E-4692-ACF2-41774CB88255}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7095D2E1-191E-4692-ACF2-41774CB88255}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7095D2E1-191E-4692-ACF2-41774CB88255}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
