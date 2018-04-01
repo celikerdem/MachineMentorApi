@@ -13,7 +13,7 @@ namespace MachineMentorApi.Services
     public class CorpusTagService : ServiceBase
     {
         #region | SQL Queries |
-        private const string GetCorpusTagsQuery = "SELECT Id, Tag, Icon, Color, TagLevelId, CorpusProjectId FROM CorpusTag WHERE CorpusProjectId = @ProjectId";
+        private const string GetCorpusTagsQuery = "SELECT Id, Tag, Icon, Color, TagLevelId, CorpusProjectId, HelpText FROM CorpusTag WHERE CorpusProjectId = @ProjectId";
         #endregion
 
         public ResponseBase<List<CorpusTag>> GetCorpusTags(int projectId)

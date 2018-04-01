@@ -25,6 +25,7 @@ namespace MachineMentorApi.Services
 	            , cp.IsDeleted 
 	            , COUNT(DISTINCT cd.Id) * cp.NumberOfUniqueTaggers TargetCorpusDocumentAssignmentCount
 	            , CASE WHEN EXISTS(SELECT 1 FROM CorpusDocument WHERE IsDeleted = 0 AND CorpusProjectId = cp.Id) THEN SUM(ISNULL(ctr.IsResponded, 0)) * 1.0 / (COUNT(DISTINCT cd.Id) * cp.NumberOfUniqueTaggers) ELSE 0 END CorpusTargetCompletionPercentage
+                , cp.HelpText
             FROM CorpusProject cp
             LEFT JOIN CorpusDocument cd ON cd.CorpusProjectId = cp.Id AND cd.IsDeleted = 0
             LEFT JOIN CorpusTagResponse ctr ON ctr.CorpusDocumentId = cd.Id
@@ -36,7 +37,8 @@ namespace MachineMentorApi.Services
 	            , cp.NumberOfUniqueTaggers
 	            , cp.MaxDocumentsForEachTagger
 	            , cp.IsActive
-	            , cp.IsDeleted ";
+	            , cp.IsDeleted
+                , cp.HelpText";
         #endregion
 
         public ResponseBase<CorpusProjectViewModel> GetProject(int id)

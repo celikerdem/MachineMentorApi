@@ -14,6 +14,7 @@ namespace MachineMentorApi.Models.ViewModels
         public int MaxDocumentsForEachTagger { get; set; }
         public int IsActive { get; set; }
         public int IsDeleted { get; set; }
+        public string HelpText { get; set; }
 
         public int IsSubscribed { get; set; }
         public int TargetCorpusDocumentAssignmentCount { get; set; }

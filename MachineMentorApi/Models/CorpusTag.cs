@@ -11,6 +11,7 @@ namespace MachineMentorApi.Models
         public string Tag { get; set; }
         public string Icon { get; set; }
         public string Color { get; set; }
+        public string HelpText { get; set; }
 
         public TagLevel TagLevelId { get; set; }
         public int CorpusProjectId { get; set; }

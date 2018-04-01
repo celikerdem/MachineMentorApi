@@ -14,5 +14,6 @@ namespace MachineMentorApi.Models
         public int MaxDocumentsForEachTagger { get; set; }
         public int IsActive { get; set; }
         public int IsDeleted { get; set; }
+        public string HelpText { get; set; }
     }
 }

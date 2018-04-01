@@ -117,7 +117,7 @@ namespace MachineMentorApi.Services
             HAVING
 	            cp.NumberOfUniqueTaggers > SUM(CASE WHEN ISNULL(ctr.Id,0) > 0 THEN 1 ELSE 0 END)
             ORDER BY
-	            COUNT(ctr.Id) ASC";
+	            COUNT(ctr.Id) ASC, cd.Id ASC";
 
         private const string SubmitTagResponseQuery =
             @"UPDATE CorpusTagResponse
