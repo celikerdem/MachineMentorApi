@@ -11,5 +11,6 @@ namespace MachineMentorApi.Models
         public string Email { get; set; }
         public string Username { get; set; }
         public int IsAuthorized { get; set; }
+        public int IsAdmin { get; set; }
     }
 }

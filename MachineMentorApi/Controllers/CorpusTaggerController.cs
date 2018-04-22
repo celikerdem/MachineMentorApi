@@ -21,6 +21,19 @@ namespace MachineMentorApi.Controllers
 
         public void Options() { }
 
+        public ResponseBaseJson<List<CorpusTagger>> Get()
+        {
+            var response = new ResponseBaseJson<List<CorpusTagger>>();
+
+            var taggerResponse = _corpusTaggerService.GetTaggers();
+            if (response.ValidData(taggerResponse.Data, "Taggers"))
+            {
+                response.Success(taggerResponse.Data);
+            }
+
+            return response;
+        }
+
         public ResponseBaseJson<CorpusTagger> Get(string username)
         {
             var response = new ResponseBaseJson<CorpusTagger>();
@@ -42,6 +55,23 @@ namespace MachineMentorApi.Controllers
             var response = new ResponseBaseJson<CorpusTagger>();
 
             var taggerResponse = _corpusTaggerService.AddTagger(tagger);
+            if (taggerResponse.Status == ServiceResponseStatuses.Success)
+            {
+                response.Success(taggerResponse.Data);
+            }
+            else
+            {
+                response.Error(taggerResponse.Messages);
+            }
+
+            return response;
+        }
+
+        public ResponseBaseJson<CorpusTagger> Put(CorpusTagger tagger)
+        {
+            var response = new ResponseBaseJson<CorpusTagger>();
+
+            var taggerResponse = _corpusTaggerService.UpdateTagger(tagger);
             if (taggerResponse.Status == ServiceResponseStatuses.Success)
             {
                 response.Success(taggerResponse.Data);
